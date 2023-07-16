@@ -1,0 +1,8 @@
+<input
+  type="text"
+  [ngModel]="value"
+  (ngModelChange)="setValue($event)"
+  (blur)="onBlurred()"
+/>
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>

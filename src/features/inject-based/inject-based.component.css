@@ -1,0 +1,7 @@
+:host {
+  display: block;
+  padding: 16px;
+}
+app-quantity-input-via-inject {
+  margin-bottom: 20px;
+}

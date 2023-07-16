@@ -1,0 +1,11 @@
+<app-quantity-input-via-inject
+  [formControl]="control"
+  [min]="min"
+  [max]="max"
+></app-quantity-input-via-inject>
+<div>Min: <input type="number" [(ngModel)]="min" /></div>
+
+<div>Max: <input type="number" [(ngModel)]="max" /></div>
+<div>
+  {{ control.errors | json }}
+</div>
