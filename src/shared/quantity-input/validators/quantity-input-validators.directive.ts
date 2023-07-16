@@ -23,7 +23,7 @@ export class QuantityInputValidatorsDirective implements Validator {
   @Input() min = 0;
   @Input() max = Number.MAX_SAFE_INTEGER;
 
-  validatorChange = () => {};
+  private validatorChange = () => {};
 
   validate(control: AbstractControl<number>) {
     const validator = Validators.compose([

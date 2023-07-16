@@ -3,7 +3,6 @@
   [ngModel]="value"
   (ngModelChange)="setValue($event)"
   (blur)="onBlurred()"
-  [class.invalid]="isInvalid"
 />
 <button (click)="increment()">+</button>
 <button (click)="decrement()">–</button>

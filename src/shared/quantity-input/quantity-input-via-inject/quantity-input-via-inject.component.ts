@@ -20,6 +20,14 @@ export class QuantityInputViaInjectComponent implements ControlValueAccessor {
 
   value = '';
 
+  get isInvalid() {
+    if (this._ngControl?.control) {
+      const { invalid, touched } = this._ngControl.control;
+      return touched && invalid;
+    }
+    return false;
+  }
+
   constructor() {
     if (this._ngControl) {
       this._ngControl.valueAccessor = this;

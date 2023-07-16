@@ -5,6 +5,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import {
   provideRouter,
   RouterLink,
+  RouterLinkActive,
   RouterOutlet,
   withHashLocation,
 } from '@angular/router';
@@ -12,7 +13,7 @@ import {
 @Component({
   selector: 'my-app',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet],
+  imports: [CommonModule, RouterLink, RouterOutlet, RouterLinkActive],
   templateUrl: './main.html',
 })
 export class App {}
@@ -26,6 +27,13 @@ bootstrapApplication(App, {
           loadComponent: () =>
             import('./features/inject-based/inject-based.component').then(
               ({ InjectBasedComponent }) => InjectBasedComponent
+            ),
+        },
+        {
+          path: 'providers-based',
+          loadComponent: () =>
+            import('./features/providers-based/providers-based.component').then(
+              ({ ProvidersBasedComponent }) => ProvidersBasedComponent
             ),
         },
       ],
